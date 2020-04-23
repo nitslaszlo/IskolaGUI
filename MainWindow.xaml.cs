@@ -31,5 +31,18 @@ namespace IskolaGUI
                 Tanulók.Items.Add(i);
             }
         }
+
+        // 11.f.: Eseménykezelő fg. létrehozása
+        private void Törlés_Click(object sender, RoutedEventArgs e)
+        {
+            if (Tanulók.SelectedIndex == -1)
+            {
+                MessageBox.Show("Nem jelölt ki tanulót!");
+            }
+            else
+            {
+                Tanulók.Items.RemoveAt(Tanulók.SelectedIndex);
+            }
+        }
     }
 }

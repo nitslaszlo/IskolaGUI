@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO; // 10.f. + nevekGUI.txt projekthez adása
 
 namespace IskolaGUI
 {
@@ -23,6 +24,12 @@ namespace IskolaGUI
         public MainWindow()
         {
             InitializeComponent();
+
+            // 10.f.:
+            foreach (var i in File.ReadAllLines("../../nevekGUI.txt"))
+            {
+                Tanulók.Items.Add(i);
+            }
         }
     }
 }

@@ -44,5 +44,26 @@ namespace IskolaGUI
                 Tanulók.Items.RemoveAt(Tanulók.SelectedIndex);
             }
         }
+
+        // 12.f.: Eseménykezelő fg. létrehozása a mentéshez
+        private void Mentés_Click(object sender, RoutedEventArgs e)
+        {
+            List<string> ki = new List<string>();
+            foreach (var i in Tanulók.Items)
+            {
+                ki.Add(i as string);
+            }
+
+            try
+            {
+                File.WriteAllLines("../../nevekNEW.txt", ki);
+                MessageBox.Show("Sikeres mentés!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }

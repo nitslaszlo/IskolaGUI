@@ -9,6 +9,6 @@
     <Grid>
         <ListBox x:Name="Tanulók" HorizontalAlignment="Left" Height="381" Margin="10,10,0,0" VerticalAlignment="Top" Width="306" />
         <Button x:Name="Törlés" Content="Törlés" HorizontalAlignment="Left" Margin="28,418,0,0" VerticalAlignment="Top" Width="111" Click="Törlés_Click"/>
-        <Button x:Name="Mentés" Content="Állomány mentése" HorizontalAlignment="Left" Margin="179,418,0,0" VerticalAlignment="Top" Width="119" />
+        <Button x:Name="Mentés" Content="Állomány mentése" HorizontalAlignment="Left" Margin="179,418,0,0" VerticalAlignment="Top" Width="119" Click="Mentés_Click" />
     </Grid>
 </Window>
